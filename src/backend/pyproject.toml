@@ -1,0 +1,61 @@
+[project]
+name = "azure-flask-sandbox-backend"
+version = "0.1.0"
+description = ""
+authors = [
+    { name = "Yu Kobayashi", email = "yukob.formal@gmail.com" }
+]
+dependencies = [
+    "Flask==2.2.2",
+    "gunicorn>=22.0.0",
+    "Werkzeug==2.2.2",
+]
+readme = "README.md"
+requires-python = ">= 3.11, < 3.12"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.rye]
+managed = true
+dev-dependencies = [
+    "ruff>=0.4.3",
+    "pre-commit>=3.7.0",
+]
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/azure_flask_sandbox"]
+
+[tool.ruff]
+line-length = 119
+
+[tool.ruff.lint]
+select = [
+    # Pyflakes
+    "F",
+    # pycodestyle
+    "E", "W",
+    # mccabe
+    "C",
+    # isort
+    "I",
+    # pep8-naming
+    "N",
+    # pydocstyle
+    "D",
+    # pyupgrade
+    "UP",
+    # flake8-bugbear
+    "B",
+    # Pylint
+    "PL",
+]
+ignore = [
+    "E203",
+    "D211",
+    "D212",
+]
