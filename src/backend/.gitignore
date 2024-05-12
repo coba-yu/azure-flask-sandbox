@@ -1,3 +1,6 @@
+.env
+appsettings.json
+
 # python generated files
 __pycache__/
 *.py[oc]

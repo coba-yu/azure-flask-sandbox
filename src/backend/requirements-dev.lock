@@ -8,20 +8,38 @@
 #   with-sources: false
 
 -e file:.
+cachelib==0.13.0
+    # via flask-session
+certifi==2024.2.2
+    # via requests
+cffi==1.16.0
+    # via cryptography
 cfgv==3.4.0
     # via pre-commit
+charset-normalizer==3.3.2
+    # via requests
 click==8.1.7
     # via flask
+cryptography==42.0.7
+    # via msal
+    # via pyjwt
 distlib==0.3.8
     # via virtualenv
 filelock==3.14.0
     # via virtualenv
 flask==2.2.2
     # via azure-flask-sandbox-backend
+    # via flask-session
+flask-session==0.5.0
+    # via identity
 gunicorn==22.0.0
     # via azure-flask-sandbox-backend
 identify==2.5.36
     # via pre-commit
+identity==0.7.0
+    # via azure-flask-sandbox-backend
+idna==3.7
+    # via requests
 itsdangerous==2.2.0
     # via flask
 jinja2==3.1.4
@@ -29,6 +47,8 @@ jinja2==3.1.4
 markupsafe==2.1.5
     # via jinja2
     # via werkzeug
+msal==1.28.0
+    # via identity
 nodeenv==1.8.0
     # via pre-commit
 packaging==24.0
@@ -36,11 +56,20 @@ packaging==24.0
 platformdirs==4.2.1
     # via virtualenv
 pre-commit==3.7.0
+pycparser==2.22
+    # via cffi
+pyjwt==2.8.0
+    # via msal
 pyyaml==6.0.1
     # via pre-commit
+requests==2.31.0
+    # via identity
+    # via msal
 ruff==0.4.4
 setuptools==69.5.1
     # via nodeenv
+urllib3==2.2.1
+    # via requests
 virtualenv==20.26.1
     # via pre-commit
 werkzeug==2.2.2
